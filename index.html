@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Insta Photo Feed</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light bg-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+<!-- Modal -->
+ <!-- Button trigger modal -->
+
+<div class="modal fade" id="create-post" tabindex="-1" aria-labelledby="create-post" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="create-post">Create a new post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Caption</p>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Add the caption of your post here</label>
+          </div>
+        <div class="mt-2">
+          <button type="button" class="btn btn-light btn-outline-secondary">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+          <button type="button" class="btn btn-light btn-outline-secondary">
+            <i class="fa-solid fa-location-dot"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
+          <!-- Example split button -->
+    
+    <div class="d-flex">
+      <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#create-post">
+        Create a new post
+      </button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+         <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+       <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Profile</a></li>
+      <li><a class="dropdown-item" href="#">Assecibility</a></li>
+      <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+    </ul>
+</div>
+    </div>
+      </nav>
+  </div>
+
+  <div class="d-flex justify-content-center mt-3">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="gridview-tab" data-bs-toggle="pill" data-bs-target="#gridview" type="button" role="tab" aria-controls="gridview" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="feed-tab" data-bs-toggle="pill" data-bs-target="#feed" type="button" role="tab" aria-controls="pills-feed-tab" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+    </li>
+  </ul>
+  </div>
+  <div class="tab-content" id="pills-tabContent">
+
+    <div class="tab-pane fade show active" id="gridview" role="tabpanel" aria-labelledby="pills-gridview-tab">
+      <div class="row">
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+        <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/450" alt="..."></div>
+      </div>
+    </div>
+    
+    <div class="tab-pane fade" id="feed" role="tabpanel" aria-labelledby="pills-feed-tab">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <span>Title</span><span>09/25</span>
+            </div>
+            <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong>1001 likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <span>Title</span><span>09/25</span>
+            </div>
+            <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong>1001 likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <span>Title</span><span>09/25</span>
+            </div>
+            <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong>1001 likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between">
+              <span>Title</span><span>09/25</span>
+            </div>
+            <img src="https://picsum.photos/400" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"><strong>1001 likes</strong></p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+     
+
+    
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+</body>
+</html>
